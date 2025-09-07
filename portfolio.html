@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>S. Kiruthick Sabarish — Embedded Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    :root{
+      --ink:#12263a;
+      --muted:#031c36;
+      --brand:#127c70;
+      --brand-2:#048fae;
+      --accent:#ee3636;
+      --bg:#000000;
+      --card:#fdf4f4;
+      --ring: 24, 164, 147;
+    }
+    *{box-sizing:border-box}
+    html,body{scroll-behavior:smooth; margin:0; padding:0;}
+    body{
+      font-family:Outfit,system-ui,Segoe UI,Roboto,Helvetica,Arial; 
+      background:url("18ed0def-89e4-4b53-87d4-e0e565c4f94d.png") no-repeat center center fixed;
+      background-size:cover;
+      color:var(--ink)
+    }
+    .navbar{background:rgba(15, 1, 73, 0.092)!important; backdrop-filter: blur(8px); border-bottom:1px solid rgba(140, 6, 6, 0.06)}
+    .section{padding:96px 0}
+    .section-title{font-weight:800; font-size:clamp(1.6rem,3vw,2.4rem)}
+    .subtitle{color:var(--muted)}
+    .btn-brand{background:linear-gradient(90deg,var(--brand),var(--brand-2)); color:#f4cccc; border:0; box-shadow:0 10px 24px rgba(0, 180, 216, 0.25)}
+    .btn-brand:hover{transform:translateY(-2px); color:#fff}
+    .cardx{background:var(--card); border-radius:22px; border:1px solid rgba(255, 253, 253, 0.06); box-shadow:0 10px 25px rgba(3, 175, 243, 0.04)}
+    .hero{position:relative; min-height:100vh; display:grid; place-items:center; overflow:hidden}
+    .hero .waves{display:none;} /* hide gradient waves */
+    .hero .content{position:relative; z-index:1}
+
+    
+    .photo-ring{
+      width:300px;
+      height:300px;
+      margin-inline:auto;
+      padding:10px;
+      border-radius:50%;
+      background: conic-gradient(from 0deg, rgba(var(--ring),1), #00b4d8, #90e0ef, rgba(255,138,91,.9), rgba(var(--ring),1));
+      animation: spin 8s linear infinite;
+    }
+    .photo{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      border-radius:50%;
+      border:4px solid #efecec;
+      box-shadow:0 12px 30px rgba(150, 143, 143, 0.1)
+    }
+    @keyframes spin{to{transform:rotate(360deg)}}
+
+    .pill{border:1px solid rgba(0,0,0,.08); border-radius:999px; padding:10px 14px; margin:6px; background:#fff}
+    .timeline{position:relative; padding-left:26px}
+    .timeline:before{content:""; position:absolute; left:9px; top:0; bottom:0; width:2px; background:linear-gradient(#a8dadc,#00b4d8)}
+    .dot{position:absolute; left:-2px; width:14px; height:14px; border-radius:50%; background:var(--accent); box-shadow:0 0 0 4px rgba(255,138,91,.25)}
+    .swiper{padding:10px}
+    .swiper-slide{height:auto}
+    .proj-card img{transition:transform .3s}
+    .proj-card:hover img{transform:scale(1.06)}
+    .reveal{opacity:0; transform:translateY(20px)}
+    .reveal.show{opacity:1; transform:none; transition:.8s ease}
+    footer{background:#c5cde3; border-top:1px solid rgba(0,0,0,.06)}
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#home" style="color:var(--brand)"><i class="bi bi-cpu"></i>  SABARISH</a>
+      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#internship">Internship</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#certifications">Certifications</a></li>
+          <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header id="home" class="hero">
+    <div class="content container text-center">
+      <div class="photo-ring mb-4 reveal"><img class="photo" src="picture.jpg" alt="Kiruthick Sabarish"></div>
+      <h1 class="fw-bold display-5 reveal">Kiruthick Sabarish  S</h1>
+      <p class="subtitle fs-5 reveal">Srivilliputtur, Tamil Nadu . Embedded Systems & IoT</p>
+      <h2 id="typed" class="fw-bold" style="color:#012a32"></h2>
+      <div class="mt-4 d-flex gap-2 justify-content-center flex-wrap reveal">
+        <a href="#projects" class="btn btn-brand btn-lg">Explore Project</a>
+        <a href="sabarish resume.pdf" class="btn btn-outline-dark btn-lg" download>Download Resume</a>
+      </div>
+    </div>
+  </header>
+
+  <section id="about" class="section">
+    <div class="container">
+      <div class="cardx p-4 reveal">
+        <h3 class="section-title mb-2">About Me</h3>
+        <p class="subtitle">I am a motivated and detail-oriented Electronics and Communication Engineering student with a strong passion for Embedded Systems, IoT, and real-time applications. I enjoy building innovative projects, learning emerging technologies, and applying problem-solving skills to create practical solutions. With hands-on experience in microcontrollers, circuit design, and programming, I strive to contribute effectively to technical projects while continuously improving my knowledge and skills.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="internship" class="section">
+    <div class="container">
+      <h3 class="section-title text-center mb-4">Internship</h3>
+      <div class="cardx p-4 timeline reveal">
+        <span class="dot" style="top:6px"></span>
+        <h5>Embedded Systems Training — <span style="color:#0b7285">NSIC Technical Service Center, Chennai</span></h5>
+        <div class="subtitle">June – July 2024</div>
+        <p>
+          Completed a one-week intensive training program on Industrial-Based Embedded Systems with AI & IoT.  
+          Gained hands-on experience in embedded hardware, IoT integration, and real-time applications.  
+          Trained under government-certified professionals at NSIC Technical Services Centre.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="section">
+    <div class="container">
+      <h3 class="section-title text-center mb-4">Skills</h3>
+      <div class="row g-3">
+        <div class="col-md-3"><div class="cardx p-4 text-center reveal">C / Embedded C</div></div>
+        <div class="col-md-3"><div class="cardx p-4 text-center reveal">PCB & Circuit Design (Tinkercad, LTSpice, Wokwi)</div></div>
+        <div class="col-md-3"><div class="cardx p-4 text-center reveal">ThingSpeak</div></div>
+        <div class="col-md-3"><div class="cardx p-4 text-center reveal">Team Management, Critical Thinking, Adaptability</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="section">
+    <div class="container">
+      <h3 class="section-title text-center mb-4">Projects</h3>
+      <div class="swiper mySwiper reveal">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="cardx proj-card p-3">
+              <img class="w-100 rounded-3 mb-3" src="ration.jpg" alt="Ration Dispenser">
+              <h5>Smart Ration Dispensing System</h5>
+              <p class="subtitle">An IoT-powered ration dispensing machine using ESP32, HX711 load cell, keypad, LCD, and ThingSpeak integration.</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="cardx proj-card p-3">
+              <img class="w-100 rounded-3 mb-3" src="homeauto.png" alt="Home Automation">
+              <h5>Smart Home Automation</h5>
+              <p class="subtitle">Arduino-based smart home automation system for controlling appliances efficiently.</p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </section>
+
+  <!--  Certifications & Achievements Section -->
+  <section id="certifications" class="section">
+    <div class="container">
+      <h3 class="section-title text-center mb-4">Certifications & Achievements</h3>
+      <div class="row g-3">
+        <div class="col-md-6">
+          <div class="cardx p-4 reveal">
+            <h5>Embedded Systems with IoT — <span style="color:#6b678a">NSIC Technical Service Center</span></h5>
+            <div class="subtitle">July 2024</div>
+            <p>Certified for completing an industrial training program in Embedded Systems, AI, and IoT applications.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="cardx p-4 reveal">
+            <h5>PCB & Circuit Design Workshop — <span style="color:#7c7ba3">PSR Engineering College</span></h5>
+            <div class="subtitle">2023</div>
+            <p>Hands-on workshop on PCB design and simulation using Tinkercad, LTSpice, and Wokwi.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="cardx p-4 reveal">
+            <h5>Hackathon Participation — <span style="color:#747399">Smart India Hackathon</span></h5>
+            <div class="subtitle">2023</div>
+            <p>Participated in national-level hackathon focusing on IoT-based problem-solving and system integration.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="cardx p-4 reveal">
+            <h5>Infosys Spring certification of C programming  — <span style="color:#807eb4">Infosys</span> </h5>
+            <div class="subtitle">2024</div>
+            <p>Earned Infosys Springboard certification in C Programming, demonstrating strong problem-solving and coding fundamentals.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="education" class="section">
+    <div class="container">
+      <h3 class="section-title text-center mb-4">Education</h3>
+      <div class="cardx p-4 reveal">
+        <h5>PSR Engineering College (2022-2026) — <span style="color:#807dd6">B.E. Electronics and Communication Engineering</span> </h5>
+        <div class="subtitle">2025 – Present . CGPA ~ 7.814/10</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <div class="container text-center">
+      <h3 class="section-title mb-4">Contact</h3>
+      <ul class="list-unstyled fs-5">
+        <li><i class="bi bi-envelope-fill"></i> sabarishkruthick@gmail.com</li>
+        <li><i class="bi bi-telephone-fill"></i> +91 93847 76342</li>
+        <li><i class="bi bi-linkedin"></i> <a href="https://www.linkedin.com/in/kiruthick-sabarish-s-2786912ab/" target="_blank">LinkedIn</a></li>
+        <li><i class="bi bi-github"></i> <a href="https://github.com/Sabarish1000" target="_blank">GitHub</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <footer class="py-4 text-center">
+    <div class="container small">© 2025 Kiruthick Sabarish S — Hardware Engineer Portfolio</div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+  <script>
+    new Typed('#typed',{strings:['Embedded Engineer Fresher','IoT • Real-time Systems','C / Embedded C • Arduino • ESP32'], typeSpeed:45, backSpeed:26, loop:true});
+    const swiper = new Swiper('.mySwiper',{slidesPerView:1.1, spaceBetween:16, centeredSlides:true, loop:true, autoplay:{delay:2500}, pagination:{el:'.swiper-pagination', clickable:true}, breakpoints:{768:{slidesPerView:2}, 1200:{slidesPerView:2}}});
+    GLightbox({ touchNavigation:true, loop:true });
+    gsap.utils.toArray(".reveal").forEach(el=>{gsap.fromTo(el,{y:20,opacity:0},{y:0,opacity:1,duration:.8,scrollTrigger:{trigger:el,start:'top 85%'}})});
+  </script>
+</body>
+</html>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+  <script>
+    new Typed('#typed',{strings:['Embedded Engineer Fresher','IoT • Real-time Systems','C / Embedded C • Arduino • ESP32'], typeSpeed:45, backSpeed:26, loop:true});
+    const swiper = new Swiper('.mySwiper',{slidesPerView:1.1, spaceBetween:16, centeredSlides:true, loop:true, autoplay:{delay:2500}, pagination:{el:'.swiper-pagination', clickable:true}, breakpoints:{768:{slidesPerView:2}, 1200:{slidesPerView:2}}});
+    GLightbox({ touchNavigation:true, loop:true });
+
+    // GSAP animations
+    gsap.from(".navbar", {y:-80, duration:1, ease:"power4.out"});
+    gsap.from(".hero .photo-ring", {scale:0, opacity:0, duration:1, delay:.3, ease:"back.out(1.7)"});
+    gsap.from(".hero h1", {y:40, opacity:0, duration:1, delay:.6});
+    gsap.from(".hero p", {y:40, opacity:0, duration:1, delay:.9});
+    gsap.from(".hero .btn", {y:20, opacity:0, duration:.8, delay:1.2, stagger:.2});
+
+    gsap.utils.toArray(".section-title").forEach((title,i)=>{
+      gsap.from(title,{x:i%2===0?-80:80, opacity:0, duration:1, scrollTrigger:{trigger:title,start:"top 80%"}});
+    });
+
+    gsap.utils.toArray(".reveal").forEach(el=>{
+      gsap.from(el,{y:40, opacity:0, duration:.9, scrollTrigger:{trigger:el,start:"top 85%"}});
+    });
+  </script>
+</body>
+</html>
